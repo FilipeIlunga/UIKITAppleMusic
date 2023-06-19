@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		230EFD872A40E4D2003BA702 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230EFD862A40E4D2003BA702 /* Favorite.storyboard */; };
+		230EFD892A40E6D9003BA702 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFD882A40E6D9003BA702 /* FavoritesViewController.swift */; };
 		23EA51212A40D0B5008658B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51202A40D0B5008658B0 /* AppDelegate.swift */; };
 		23EA51232A40D0B5008658B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51222A40D0B5008658B0 /* SceneDelegate.swift */; };
 		23EA51252A40D0B5008658B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51242A40D0B5008658B0 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		230EFD862A40E4D2003BA702 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
+		230EFD882A40E6D9003BA702 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		23EA511D2A40D0B5008658B0 /* UIKITAppleMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKITAppleMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EA51202A40D0B5008658B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EA51222A40D0B5008658B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				23EA51242A40D0B5008658B0 /* ViewController.swift */,
+				230EFD882A40E6D9003BA702 /* FavoritesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				23EA51522A40D83F008658B0 /* ViewControllerFactory.swift in Sources */,
 				23EA51212A40D0B5008658B0 /* AppDelegate.swift in Sources */,
 				23EA51232A40D0B5008658B0 /* SceneDelegate.swift in Sources */,
+				230EFD892A40E6D9003BA702 /* FavoritesViewController.swift in Sources */,
 				23EA514F2A40D643008658B0 /* MusicService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
