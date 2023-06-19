@@ -18,6 +18,7 @@
 		23EA514D2A40D643008658B0 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 23EA51472A40D643008658B0 /* data.json */; };
 		23EA514E2A40D643008658B0 /* data-with-images.json in Resources */ = {isa = PBXBuildFile; fileRef = 23EA51482A40D643008658B0 /* data-with-images.json */; };
 		23EA514F2A40D643008658B0 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA514A2A40D643008658B0 /* MusicService.swift */; };
+		23EA51522A40D83F008658B0 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51512A40D83F008658B0 /* ViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		23EA51472A40D643008658B0 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		23EA51482A40D643008658B0 /* data-with-images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-with-images.json"; sourceTree = "<group>"; };
 		23EA514A2A40D643008658B0 /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
+		23EA51512A40D83F008658B0 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,14 +68,11 @@
 		23EA511F2A40D0B5008658B0 /* UIKITAppleMusic */ = {
 			isa = PBXGroup;
 			children = (
+				23EA51552A40D8C9008658B0 /* XCodeFiles */,
+				23EA51542A40D8B7008658B0 /* ViewControllers */,
+				23EA51532A40D8A7008658B0 /* Storyboards */,
+				23EA51502A40D822008658B0 /* Factory */,
 				23EA51432A40D643008658B0 /* Nano resources */,
-				23EA51202A40D0B5008658B0 /* AppDelegate.swift */,
-				23EA51222A40D0B5008658B0 /* SceneDelegate.swift */,
-				23EA51242A40D0B5008658B0 /* ViewController.swift */,
-				23EA51262A40D0B5008658B0 /* Main.storyboard */,
-				23EA512B2A40D0B6008658B0 /* LaunchScreen.storyboard */,
-				23EA512E2A40D0B6008658B0 /* Info.plist */,
-				23EA51342A40D187008658B0 /* .gitignore */,
 			);
 			path = UIKITAppleMusic;
 			sourceTree = "<group>";
@@ -104,6 +103,42 @@
 				23EA514A2A40D643008658B0 /* MusicService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		23EA51502A40D822008658B0 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				23EA51512A40D83F008658B0 /* ViewControllerFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		23EA51532A40D8A7008658B0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				23EA51262A40D0B5008658B0 /* Main.storyboard */,
+				23EA512B2A40D0B6008658B0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		23EA51542A40D8B7008658B0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				23EA51242A40D0B5008658B0 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		23EA51552A40D8C9008658B0 /* XCodeFiles */ = {
+			isa = PBXGroup;
+			children = (
+				23EA51202A40D0B5008658B0 /* AppDelegate.swift */,
+				23EA51222A40D0B5008658B0 /* SceneDelegate.swift */,
+				23EA512E2A40D0B6008658B0 /* Info.plist */,
+				23EA51342A40D187008658B0 /* .gitignore */,
+			);
+			path = XCodeFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23EA51252A40D0B5008658B0 /* ViewController.swift in Sources */,
+				23EA51522A40D83F008658B0 /* ViewControllerFactory.swift in Sources */,
 				23EA51212A40D0B5008658B0 /* AppDelegate.swift in Sources */,
 				23EA51232A40D0B5008658B0 /* SceneDelegate.swift in Sources */,
 				23EA514F2A40D643008658B0 /* MusicService.swift in Sources */,
