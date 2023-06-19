@@ -13,6 +13,7 @@
 		23EA51282A40D0B5008658B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EA51262A40D0B5008658B0 /* Main.storyboard */; };
 		23EA512A2A40D0B6008658B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23EA51292A40D0B6008658B0 /* Assets.xcassets */; };
 		23EA512D2A40D0B6008658B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EA512B2A40D0B6008658B0 /* LaunchScreen.storyboard */; };
+		23EA51352A40D187008658B0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 23EA51342A40D187008658B0 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		23EA51292A40D0B6008658B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23EA512C2A40D0B6008658B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23EA512E2A40D0B6008658B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23EA51342A40D187008658B0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				23EA51292A40D0B6008658B0 /* Assets.xcassets */,
 				23EA512B2A40D0B6008658B0 /* LaunchScreen.storyboard */,
 				23EA512E2A40D0B6008658B0 /* Info.plist */,
+				23EA51342A40D187008658B0 /* .gitignore */,
 			);
 			path = UIKITAppleMusic;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23EA51352A40D187008658B0 /* .gitignore in Resources */,
 				23EA512D2A40D0B6008658B0 /* LaunchScreen.storyboard in Resources */,
 				23EA512A2A40D0B6008658B0 /* Assets.xcassets in Resources */,
 				23EA51282A40D0B5008658B0 /* Main.storyboard in Resources */,
