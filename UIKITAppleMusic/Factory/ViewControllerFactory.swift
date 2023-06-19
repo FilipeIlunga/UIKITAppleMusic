@@ -10,29 +10,35 @@ import Foundation
 import UIKit
 
 struct StoryboardRepresentation {
-    let bundle: Bundle?
+    let bundle: Bundle? //oq é?
     let storyboardName: String
     let storyboardId: String
 }
 
 enum TypeOfViewController {
-    case home
-    case detail
+    case library
+    case favorites
+    case search
     
     var storyboardId: String {
+        #warning("COLOCAR OS NOMES PLSSS")
         switch self {
-        case .home:
+        case .library:
             return "HomeViewControllerID"
-        case .detail:
+        case .favorites:
             return "DetailViewViewControllerID"
+        case .search:
+            return ""
         }
     }
     
     var storyboardName: String {
         switch self {
-        case .home:
+        case .library:
             return "Main"
-        case .detail:
+        case .favorites:
+            return "Main"
+        case .search:
             return "Main"
         }
     }
@@ -41,10 +47,9 @@ enum TypeOfViewController {
 extension TypeOfViewController {
     func storyboardRepresentation() -> StoryboardRepresentation {
         switch self {
-        case .home:
+        default:
             return StoryboardRepresentation(bundle: nil, storyboardName: self.storyboardName, storyboardId: self.storyboardId)
-        case .detail:
-            return StoryboardRepresentation(bundle: nil, storyboardName: self.storyboardName, storyboardId: self.storyboardId)
+
         }
     }
 }
