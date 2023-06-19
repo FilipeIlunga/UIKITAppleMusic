@@ -69,6 +69,7 @@
 		23EA511F2A40D0B5008658B0 /* UIKITAppleMusic */ = {
 			isa = PBXGroup;
 			children = (
+				23EA512E2A40D0B6008658B0 /* Info.plist */,
 				23EA51552A40D8C9008658B0 /* XCodeFiles */,
 				23EA51542A40D8B7008658B0 /* ViewControllers */,
 				23EA51532A40D8A7008658B0 /* Storyboards */,
@@ -136,7 +137,6 @@
 			children = (
 				23EA51202A40D0B5008658B0 /* AppDelegate.swift */,
 				23EA51222A40D0B5008658B0 /* SceneDelegate.swift */,
-				23EA512E2A40D0B6008658B0 /* Info.plist */,
 			);
 			path = XCodeFiles;
 			sourceTree = "<group>";
