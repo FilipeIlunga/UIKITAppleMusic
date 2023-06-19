@@ -52,6 +52,7 @@
 		23EA51142A40D0B5008658B0 = {
 			isa = PBXGroup;
 			children = (
+				23EA51342A40D187008658B0 /* .gitignore */,
 				23EA511F2A40D0B5008658B0 /* UIKITAppleMusic */,
 				23EA511E2A40D0B5008658B0 /* Products */,
 			);
@@ -136,7 +137,6 @@
 				23EA51202A40D0B5008658B0 /* AppDelegate.swift */,
 				23EA51222A40D0B5008658B0 /* SceneDelegate.swift */,
 				23EA512E2A40D0B6008658B0 /* Info.plist */,
-				23EA51342A40D187008658B0 /* .gitignore */,
 			);
 			path = XCodeFiles;
 			sourceTree = "<group>";
