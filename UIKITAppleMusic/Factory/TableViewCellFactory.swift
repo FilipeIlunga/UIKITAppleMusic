@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AutoLayoutRepresentation {
+ protocol AutoLayoutRepresentation {
     //Não sei oq esse camarada faz
     var bundle: Bundle? {get set}
     // Nome do arquivo
@@ -19,7 +19,13 @@ protocol AutoLayoutRepresentation {
 //MARK: PASSOS PARA CRIAR UMA CÉLULA
 
 //MARK: 1 - Criar uma struct para a célula customizável
-struct MusicRowCell: AutoLayoutRepresentation {
+fileprivate struct MusicRowCell: AutoLayoutRepresentation {
+    var bundle: Bundle?
+    var fileName: String
+    var identifier: String
+}
+
+fileprivate struct EmptyFavorityCell: AutoLayoutRepresentation {
     var bundle: Bundle?
     var fileName: String
     var identifier: String
@@ -28,12 +34,15 @@ struct MusicRowCell: AutoLayoutRepresentation {
 enum CellType {
     //MARK: 2 - Adicionar uma case  dela na cellType
     case musicRow
+    case emptyFavorite
     
     // id da xib
     var identifier: String {
         switch self {
         case .musicRow:
             return "musicRowCellID"
+        case .emptyFavorite:
+            return "emptyFavoriteCell"
         }
     }
     
@@ -42,6 +51,8 @@ enum CellType {
         switch self {
         case .musicRow:
             return "MusicRowTableViewCell"
+        case .emptyFavorite:
+            return "EmptyFavoriteTableViewCell"
         }
     }
 }
@@ -52,6 +63,8 @@ extension CellType {
         //MARK:  3 - Criar uma representacao dela
         case .musicRow:
             return MusicRowCell(fileName: self.fileName, identifier: self.identifier)
+        case .emptyFavorite:
+            return EmptyFavorityCell(fileName: self.fileName, identifier: self.identifier)
         }
     }
 }
