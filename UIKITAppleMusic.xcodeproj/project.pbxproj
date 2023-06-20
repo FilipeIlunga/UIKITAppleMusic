@@ -14,6 +14,10 @@
 		230EFD8F2A4127DA003BA702 /* TableViewCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFD8E2A4127DA003BA702 /* TableViewCellFactory.swift */; };
 		230EFD922A41CF92003BA702 /* EmptyFavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFD902A41CF92003BA702 /* EmptyFavoriteTableViewCell.swift */; };
 		230EFD932A41CF92003BA702 /* EmptyFavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230EFD912A41CF92003BA702 /* EmptyFavoriteTableViewCell.xib */; };
+		230EFDA22A421669003BA702 /* SearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230EFDA12A421669003BA702 /* SearchView.storyboard */; };
+		230EFDA42A4216B2003BA702 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFDA32A4216B2003BA702 /* SearchViewController.swift */; };
+		230EFDA72A423115003BA702 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFDA52A423115003BA702 /* CategoryCollectionViewCell.swift */; };
+		230EFDA82A423115003BA702 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230EFDA62A423115003BA702 /* CategoryCollectionViewCell.xib */; };
 		23EA51212A40D0B5008658B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51202A40D0B5008658B0 /* AppDelegate.swift */; };
 		23EA51232A40D0B5008658B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51222A40D0B5008658B0 /* SceneDelegate.swift */; };
 		23EA51252A40D0B5008658B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51242A40D0B5008658B0 /* ViewController.swift */; };
@@ -39,6 +43,10 @@
 		230EFD8E2A4127DA003BA702 /* TableViewCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellFactory.swift; sourceTree = "<group>"; };
 		230EFD902A41CF92003BA702 /* EmptyFavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		230EFD912A41CF92003BA702 /* EmptyFavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyFavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		230EFDA12A421669003BA702 /* SearchView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchView.storyboard; sourceTree = "<group>"; };
+		230EFDA32A4216B2003BA702 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		230EFDA52A423115003BA702 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		230EFDA62A423115003BA702 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		23EA511D2A40D0B5008658B0 /* UIKITAppleMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKITAppleMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EA51202A40D0B5008658B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EA51222A40D0B5008658B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +82,9 @@
 			children = (
 				230EFD9F2A420B03003BA702 /* XIB */,
 				230EFD902A41CF92003BA702 /* EmptyFavoriteTableViewCell.swift */,
+				230EFDA52A423115003BA702 /* CategoryCollectionViewCell.swift */,
 				230EFD8A2A40EAAE003BA702 /* MusicRowTableViewCell.swift */,
+				CC0B8ECC2A40E89400724D5C /* LibraryTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -84,6 +94,7 @@
 			children = (
 				230EFD8B2A40EAAE003BA702 /* MusicRowTableViewCell.xib */,
 				230EFD912A41CF92003BA702 /* EmptyFavoriteTableViewCell.xib */,
+				230EFDA62A423115003BA702 /* CategoryCollectionViewCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -109,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				230EFD9E2A420AE7003BA702 /* CustomCells */,
-				CC0B8ECB2A40E87000724D5C /* TabelViewCells */,
 				23EA512E2A40D0B6008658B0 /* Info.plist */,
 				23EA51442A40D643008658B0 /* Assets.xcassets */,
 				23EA51552A40D8C9008658B0 /* XCodeFiles */,
@@ -156,6 +166,7 @@
 				23EA512B2A40D0B6008658B0 /* LaunchScreen.storyboard */,
 				230EFD862A40E4D2003BA702 /* Favorite.storyboard */,
 				CC0B8EC82A40E35100724D5C /* LibraryStoryboard.storyboard */,
+				230EFDA12A421669003BA702 /* SearchView.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -166,6 +177,7 @@
 				23EA51242A40D0B5008658B0 /* ViewController.swift */,
 				230EFD882A40E6D9003BA702 /* FavoritesViewController.swift */,
 				CC0B8EC62A40E31400724D5C /* LibraryViewController.swift */,
+				230EFDA32A4216B2003BA702 /* SearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,14 +189,6 @@
 				23EA51222A40D0B5008658B0 /* SceneDelegate.swift */,
 			);
 			path = XCodeFiles;
-			sourceTree = "<group>";
-		};
-		CC0B8ECB2A40E87000724D5C /* TabelViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				CC0B8ECC2A40E89400724D5C /* LibraryTableViewCell.swift */,
-			);
-			path = TabelViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,10 +250,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				23EA514C2A40D643008658B0 /* data-images.json in Resources */,
+				230EFDA22A421669003BA702 /* SearchView.storyboard in Resources */,
 				CC0B8EC92A40E35100724D5C /* LibraryStoryboard.storyboard in Resources */,
 				23EA514E2A40D643008658B0 /* data-with-images.json in Resources */,
 				230EFD8D2A40EAAE003BA702 /* MusicRowTableViewCell.xib in Resources */,
 				230EFD872A40E4D2003BA702 /* Favorite.storyboard in Resources */,
+				230EFDA82A423115003BA702 /* CategoryCollectionViewCell.xib in Resources */,
 				23EA514D2A40D643008658B0 /* data.json in Resources */,
 				23EA51352A40D187008658B0 /* .gitignore in Resources */,
 				23EA512D2A40D0B6008658B0 /* LaunchScreen.storyboard in Resources */,
@@ -272,6 +278,8 @@
 				23EA51522A40D83F008658B0 /* ViewControllerFactory.swift in Sources */,
 				230EFD8C2A40EAAE003BA702 /* MusicRowTableViewCell.swift in Sources */,
 				230EFD922A41CF92003BA702 /* EmptyFavoriteTableViewCell.swift in Sources */,
+				230EFDA72A423115003BA702 /* CategoryCollectionViewCell.swift in Sources */,
+				230EFDA42A4216B2003BA702 /* SearchViewController.swift in Sources */,
 				23EA51212A40D0B5008658B0 /* AppDelegate.swift in Sources */,
 				23EA51232A40D0B5008658B0 /* SceneDelegate.swift in Sources */,
 				230EFD892A40E6D9003BA702 /* FavoritesViewController.swift in Sources */,
