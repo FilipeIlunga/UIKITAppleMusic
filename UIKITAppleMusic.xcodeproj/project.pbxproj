@@ -11,6 +11,7 @@
 		230EFD892A40E6D9003BA702 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFD882A40E6D9003BA702 /* FavoritesViewController.swift */; };
 		230EFD8C2A40EAAE003BA702 /* MusicRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFD8A2A40EAAE003BA702 /* MusicRowTableViewCell.swift */; };
 		230EFD8D2A40EAAE003BA702 /* MusicRowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230EFD8B2A40EAAE003BA702 /* MusicRowTableViewCell.xib */; };
+		230EFD8F2A4127DA003BA702 /* TableViewCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFD8E2A4127DA003BA702 /* TableViewCellFactory.swift */; };
 		23EA51212A40D0B5008658B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51202A40D0B5008658B0 /* AppDelegate.swift */; };
 		23EA51232A40D0B5008658B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51222A40D0B5008658B0 /* SceneDelegate.swift */; };
 		23EA51252A40D0B5008658B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51242A40D0B5008658B0 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		230EFD882A40E6D9003BA702 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		230EFD8A2A40EAAE003BA702 /* MusicRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRowTableViewCell.swift; sourceTree = "<group>"; };
 		230EFD8B2A40EAAE003BA702 /* MusicRowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicRowTableViewCell.xib; sourceTree = "<group>"; };
+		230EFD8E2A4127DA003BA702 /* TableViewCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellFactory.swift; sourceTree = "<group>"; };
 		23EA511D2A40D0B5008658B0 /* UIKITAppleMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKITAppleMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EA51202A40D0B5008658B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EA51222A40D0B5008658B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				23EA51512A40D83F008658B0 /* ViewControllerFactory.swift */,
+				230EFD8E2A4127DA003BA702 /* TableViewCellFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230EFD8F2A4127DA003BA702 /* TableViewCellFactory.swift in Sources */,
 				23EA51252A40D0B5008658B0 /* ViewController.swift in Sources */,
 				23EA51522A40D83F008658B0 /* ViewControllerFactory.swift in Sources */,
 				230EFD8C2A40EAAE003BA702 /* MusicRowTableViewCell.swift in Sources */,
