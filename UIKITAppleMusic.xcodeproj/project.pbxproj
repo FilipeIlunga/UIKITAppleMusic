@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230EFD872A40E4D2003BA702 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230EFD862A40E4D2003BA702 /* Favorite.storyboard */; };
+		230EFD892A40E6D9003BA702 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFD882A40E6D9003BA702 /* FavoritesViewController.swift */; };
+		230EFD8C2A40EAAE003BA702 /* MusicRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFD8A2A40EAAE003BA702 /* MusicRowTableViewCell.swift */; };
+		230EFD8D2A40EAAE003BA702 /* MusicRowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230EFD8B2A40EAAE003BA702 /* MusicRowTableViewCell.xib */; };
+		230EFD8F2A4127DA003BA702 /* TableViewCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFD8E2A4127DA003BA702 /* TableViewCellFactory.swift */; };
+		230EFD922A41CF92003BA702 /* EmptyFavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFD902A41CF92003BA702 /* EmptyFavoriteTableViewCell.swift */; };
+		230EFD932A41CF92003BA702 /* EmptyFavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230EFD912A41CF92003BA702 /* EmptyFavoriteTableViewCell.xib */; };
 		23EA51212A40D0B5008658B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51202A40D0B5008658B0 /* AppDelegate.swift */; };
 		23EA51232A40D0B5008658B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51222A40D0B5008658B0 /* SceneDelegate.swift */; };
 		23EA51252A40D0B5008658B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51242A40D0B5008658B0 /* ViewController.swift */; };
@@ -25,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230EFD862A40E4D2003BA702 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
+		230EFD882A40E6D9003BA702 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		230EFD8A2A40EAAE003BA702 /* MusicRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRowTableViewCell.swift; sourceTree = "<group>"; };
+		230EFD8B2A40EAAE003BA702 /* MusicRowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicRowTableViewCell.xib; sourceTree = "<group>"; };
+		230EFD8E2A4127DA003BA702 /* TableViewCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellFactory.swift; sourceTree = "<group>"; };
+		230EFD902A41CF92003BA702 /* EmptyFavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		230EFD912A41CF92003BA702 /* EmptyFavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyFavoriteTableViewCell.xib; sourceTree = "<group>"; };
 		23EA511D2A40D0B5008658B0 /* UIKITAppleMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKITAppleMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EA51202A40D0B5008658B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EA51222A40D0B5008658B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				23EA51512A40D83F008658B0 /* ViewControllerFactory.swift */,
+				230EFD8E2A4127DA003BA702 /* TableViewCellFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -119,6 +134,11 @@
 			children = (
 				23EA51262A40D0B5008658B0 /* Main.storyboard */,
 				23EA512B2A40D0B6008658B0 /* LaunchScreen.storyboard */,
+				230EFD862A40E4D2003BA702 /* Favorite.storyboard */,
+				230EFD8A2A40EAAE003BA702 /* MusicRowTableViewCell.swift */,
+				230EFD8B2A40EAAE003BA702 /* MusicRowTableViewCell.xib */,
+				230EFD902A41CF92003BA702 /* EmptyFavoriteTableViewCell.swift */,
+				230EFD912A41CF92003BA702 /* EmptyFavoriteTableViewCell.xib */,
 				CC0B8EC82A40E35100724D5C /* LibraryStoryboard.storyboard */,
 			);
 			path = Storyboards;
@@ -128,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				23EA51242A40D0B5008658B0 /* ViewController.swift */,
+				230EFD882A40E6D9003BA702 /* FavoritesViewController.swift */,
 				CC0B8EC62A40E31400724D5C /* LibraryViewController.swift */,
 			);
 			path = ViewControllers;
@@ -211,9 +232,12 @@
 				23EA514C2A40D643008658B0 /* data-images.json in Resources */,
 				CC0B8EC92A40E35100724D5C /* LibraryStoryboard.storyboard in Resources */,
 				23EA514E2A40D643008658B0 /* data-with-images.json in Resources */,
+				230EFD8D2A40EAAE003BA702 /* MusicRowTableViewCell.xib in Resources */,
+				230EFD872A40E4D2003BA702 /* Favorite.storyboard in Resources */,
 				23EA514D2A40D643008658B0 /* data.json in Resources */,
 				23EA51352A40D187008658B0 /* .gitignore in Resources */,
 				23EA512D2A40D0B6008658B0 /* LaunchScreen.storyboard in Resources */,
+				230EFD932A41CF92003BA702 /* EmptyFavoriteTableViewCell.xib in Resources */,
 				23EA514B2A40D643008658B0 /* Assets.xcassets in Resources */,
 				23EA51282A40D0B5008658B0 /* Main.storyboard in Resources */,
 			);
@@ -226,11 +250,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230EFD8F2A4127DA003BA702 /* TableViewCellFactory.swift in Sources */,
 				23EA51252A40D0B5008658B0 /* ViewController.swift in Sources */,
 				CC0B8ECD2A40E89400724D5C /* LibraryTableViewCell.swift in Sources */,
 				23EA51522A40D83F008658B0 /* ViewControllerFactory.swift in Sources */,
+				230EFD8C2A40EAAE003BA702 /* MusicRowTableViewCell.swift in Sources */,
+				230EFD922A41CF92003BA702 /* EmptyFavoriteTableViewCell.swift in Sources */,
 				23EA51212A40D0B5008658B0 /* AppDelegate.swift in Sources */,
 				23EA51232A40D0B5008658B0 /* SceneDelegate.swift in Sources */,
+				230EFD892A40E6D9003BA702 /* FavoritesViewController.swift in Sources */,
 				CC0B8EC72A40E31400724D5C /* LibraryViewController.swift in Sources */,
 				23EA514F2A40D643008658B0 /* MusicService.swift in Sources */,
 			);
