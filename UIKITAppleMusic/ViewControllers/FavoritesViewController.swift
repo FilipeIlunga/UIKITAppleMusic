@@ -8,15 +8,25 @@
 import UIKit
 
 class FavoritesViewController: UIViewController {
-    
+       
     @IBOutlet weak var tableView: UITableView!
+    
+    let searchController = UISearchController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         title = "Favorites"
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+}
+
+extension FavoritesViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        
     }
 }
 

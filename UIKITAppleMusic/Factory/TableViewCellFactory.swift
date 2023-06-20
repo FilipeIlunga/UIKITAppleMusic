@@ -7,23 +7,38 @@
 
 import UIKit
 
-struct CellRepresentation {
-    let bundle: Bundle?
-    let nibName: String
-    let cellIdentifier: String
+protocol AutoLayoutRepresentation {
+    //Não sei oq esse camarada faz
+    var bundle: Bundle? {get set}
+    // Nome do arquivo
+    var fileName: String {get set}
+    //Id da Xib ou storyboard
+    var identifier: String {get set}
+}
+
+//MARK: PASSOS PARA CRIAR UMA CÉLULA
+
+//MARK: 1 - Criar uma struct para a célula customizável
+struct MusicRowCell: AutoLayoutRepresentation {
+    var bundle: Bundle?
+    var fileName: String
+    var identifier: String
 }
 
 enum CellType {
+    //MARK: 2 - Adicionar uma case  dela na cellType
     case musicRow
     
-    var cellIdentifier: String {
+    // id da xib
+    var identifier: String {
         switch self {
         case .musicRow:
             return "musicRowCellID"
         }
     }
     
-    var nibName: String {
+    //É o nome do arquivo da xib
+    var fileName: String {
         switch self {
         case .musicRow:
             return "MusicRowTableViewCell"
@@ -31,38 +46,29 @@ enum CellType {
     }
 }
 
-extension UITableView {
-    func registerAndDequeueReusableCell(cellType: CellType, indexPath: IndexPath) -> UITableViewCell {
-        let cellRepresentation = cellType.cellRepresentation()
-        
-        let uINibCell: UINib = UINib(nibName: cellRepresentation.nibName, bundle: nil)
-        
-        self.register(uINibCell, forCellReuseIdentifier: cellRepresentation.cellIdentifier)
-
-        let cell = self.dequeueReusableCell(withIdentifier: cellRepresentation.cellIdentifier, for: indexPath)
-        
-        return cell
-    }
-}
-
 extension CellType {
-    func cellRepresentation() -> CellRepresentation {
+    func cellRepresentation() -> AutoLayoutRepresentation {
         switch self {
-        default:
-            return CellRepresentation(bundle: nil, nibName: self.nibName, cellIdentifier: self.cellIdentifier)
+        //MARK:  3 - Criar uma representacao dela
+        case .musicRow:
+            return MusicRowCell(fileName: self.fileName, identifier: self.identifier)
         }
     }
 }
 
+// Não é necessário mexer nessa class
 class TableViewCellFactory {
     static func createCell(cellType: CellType, for tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        
         let cellRepresentation = cellType.cellRepresentation()
         
-        let uINibCell: UINib = UINib(nibName: cellRepresentation.nibName, bundle: nil)
+        //Pegamos em cache o arquivo da xib e armazenamos ela nessa variável
+        let uiNibCell: UINib = UINib(nibName: cellRepresentation.fileName, bundle: nil)
         
-        tableView.register(uINibCell, forCellReuseIdentifier: cellRepresentation.cellIdentifier)
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellRepresentation.cellIdentifier, for: indexPath)
+        //Registramos a celula na table view
+        tableView.register(uiNibCell, forCellReuseIdentifier: cellRepresentation.identifier)
+       
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellRepresentation.identifier, for: indexPath)
         
         return cell
     }
