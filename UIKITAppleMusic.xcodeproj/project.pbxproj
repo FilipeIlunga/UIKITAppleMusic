@@ -69,6 +69,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230EFD9E2A420AE7003BA702 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				230EFD9F2A420B03003BA702 /* XIB */,
+				230EFD902A41CF92003BA702 /* EmptyFavoriteTableViewCell.swift */,
+				230EFD8A2A40EAAE003BA702 /* MusicRowTableViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		230EFD9F2A420B03003BA702 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				230EFD8B2A40EAAE003BA702 /* MusicRowTableViewCell.xib */,
+				230EFD912A41CF92003BA702 /* EmptyFavoriteTableViewCell.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
 		23EA51142A40D0B5008658B0 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +108,7 @@
 		23EA511F2A40D0B5008658B0 /* UIKITAppleMusic */ = {
 			isa = PBXGroup;
 			children = (
+				230EFD9E2A420AE7003BA702 /* CustomCells */,
 				CC0B8ECB2A40E87000724D5C /* TabelViewCells */,
 				23EA512E2A40D0B6008658B0 /* Info.plist */,
 				23EA51442A40D643008658B0 /* Assets.xcassets */,
@@ -135,10 +155,6 @@
 				23EA51262A40D0B5008658B0 /* Main.storyboard */,
 				23EA512B2A40D0B6008658B0 /* LaunchScreen.storyboard */,
 				230EFD862A40E4D2003BA702 /* Favorite.storyboard */,
-				230EFD8A2A40EAAE003BA702 /* MusicRowTableViewCell.swift */,
-				230EFD8B2A40EAAE003BA702 /* MusicRowTableViewCell.xib */,
-				230EFD902A41CF92003BA702 /* EmptyFavoriteTableViewCell.swift */,
-				230EFD912A41CF92003BA702 /* EmptyFavoriteTableViewCell.xib */,
 				CC0B8EC82A40E35100724D5C /* LibraryStoryboard.storyboard */,
 			);
 			path = Storyboards;

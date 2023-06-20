@@ -39,11 +39,11 @@
             </objects>
             <point key="canvasLocation" x="1063.3587786259541" y="4.9295774647887329"/>
         </scene>
-        <!--Item-->
+        <!--Favorites-->
         <scene sceneID="IeW-r2-pzk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z8v-mg-hcg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="w25-cR-Pog"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heart.fill" catalog="system" selectedImage="heart.fill" id="w25-cR-Pog"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jgD-u1-Xif">
@@ -61,6 +61,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
