@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-TC-avC">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LibraryCell" rowHeight="62" id="bhH-5e-HEH" customClass="LibraryTableViewCell" customModule="UIKITAppleMusic" customModuleProvider="target">
@@ -74,13 +74,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEP-71-peb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802.29007633587787" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="1729.0076335877861" y="-34.507042253521128"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="UYA-q9-RXD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Lr-Iu-Dke" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="b2M-S9-G3v"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3mS-NS-Lhb">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -99,7 +101,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Qq-Wh-wBt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-124.42748091603053" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="802.29007633587787" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
