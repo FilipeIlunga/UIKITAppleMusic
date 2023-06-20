@@ -21,6 +21,7 @@ class FavoritesViewController: UIViewController {
         tableView.delegate = self
         title = "Favorites"
         searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Artists, Songs, Lyrics, and More"
         navigationItem.searchController = searchController
         navigationController?.navigationBar.prefersLargeTitles = true
     }
