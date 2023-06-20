@@ -14,11 +14,13 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Jt-BH-vQx">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.91764706370000004" green="0.2588235438" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.91764706370000004" green="0.2588235438" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8Td-oJ-Z1n" kind="relationship" relationship="viewControllers" id="1Lh-W6-fUQ"/>
-                        <segue destination="VWO-NT-tMY" kind="relationship" relationship="viewControllers" id="XOh-Me-FOy"/>
+                        <segue destination="VWO-NT-tMY" kind="relationship" relationship="viewControllers" id="PY9-Nw-kyE"/>
+                        <segue destination="8Td-oJ-Z1n" kind="relationship" relationship="viewControllers" id="enM-D7-GMj"/>
+                        <segue destination="o1h-Fh-h2z" kind="relationship" relationship="viewControllers" id="lAZ-mW-ew5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kha-DZ-63G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -33,7 +35,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6K-Fr-ZT4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="7"/>
+            <point key="canvasLocation" x="787" y="136"/>
         </scene>
         <!--LibraryStoryboard-->
         <scene sceneID="NjG-Cq-5iP">
@@ -43,7 +45,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pe1-Nv-OS4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783" y="143"/>
+            <point key="canvasLocation" x="785" y="41"/>
+        </scene>
+        <!--SearchView-->
+        <scene sceneID="Tgd-Yd-7df">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SearchView" id="o1h-Fh-h2z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="S96-Od-qwg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKt-Gj-WF2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="269"/>
         </scene>
     </scenes>
 </document>
