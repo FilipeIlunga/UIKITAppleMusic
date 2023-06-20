@@ -24,20 +24,20 @@ class MusicRowTableViewCell: UITableViewCell {
         
     }
     
-    func setCell(showFavorite: Bool = false) {
+    func setupCell(music: Music,showFavorite: Bool = false) {
+        setCellInfo(music: music)
         if showFavorite {
             favortieButton.isHidden = false
         } else {
             favortieButton.isHidden = true
             accessoryType = .disclosureIndicator
         }
-       
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setCellInfo(music: Music) {
+        posterImage.image = UIImage(named: music.id)
+        titleLabel.text = music.title
+        artistLabel.text = music.artist
     }
     
     
