@@ -32,10 +32,11 @@
                                                     <color key="tintColor" systemColor="systemPinkColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="jgh-xO-ia4" secondAttribute="height" multiplier="1:1" constant="3" id="1ib-S9-7Ud"/>
+                                                        <constraint firstAttribute="height" constant="28" id="vPX-nd-vkJ"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQv-KW-q3p">
-                                                    <rect key="frame" x="85" y="19" width="41.333333333333343" height="24"/>
+                                                    <rect key="frame" x="85" y="21" width="41.333333333333343" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -44,8 +45,7 @@
                                                 <constraint firstItem="jgh-xO-ia4" firstAttribute="top" secondItem="Cw6-cr-0US" secondAttribute="top" constant="8" id="2CL-ur-YOs"/>
                                                 <constraint firstItem="cQv-KW-q3p" firstAttribute="leading" secondItem="jgh-xO-ia4" secondAttribute="trailing" constant="16" id="9fT-iv-CTv"/>
                                                 <constraint firstItem="jgh-xO-ia4" firstAttribute="leading" secondItem="Cw6-cr-0US" secondAttribute="leading" constant="20" symbolic="YES" id="DcR-6g-LuB"/>
-                                                <constraint firstItem="cQv-KW-q3p" firstAttribute="top" secondItem="Cw6-cr-0US" secondAttribute="topMargin" constant="8" id="f8m-0H-lSa"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="cQv-KW-q3p" secondAttribute="bottom" constant="8" id="gwj-Bs-ubq"/>
+                                                <constraint firstItem="cQv-KW-q3p" firstAttribute="centerY" secondItem="Cw6-cr-0US" secondAttribute="centerY" id="bpx-QD-si8"/>
                                                 <constraint firstAttribute="bottom" secondItem="jgh-xO-ia4" secondAttribute="bottom" constant="8" id="qTg-Yp-CsD"/>
                                             </constraints>
                                         </tableViewCellContentView>
