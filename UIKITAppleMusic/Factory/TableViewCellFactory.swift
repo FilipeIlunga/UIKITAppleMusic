@@ -99,3 +99,57 @@ class TableViewCellFactory {
         return cell
     }
 }
+
+
+fileprivate struct CategoryCell: AutoLayoutRepresentation {
+    var bundle: Bundle?
+    var fileName: String
+    var identifier: String
+}
+
+enum CollectionViewCellType {
+    case category
+    
+    var identifier: String {
+        switch self {
+        case .category:
+            return "categoryCellID"
+        }
+    }
+    
+    var fileName: String {
+        switch self {
+        case .category:
+            return "CategoryCollectionViewCell"
+        }
+    }
+}
+
+extension CollectionViewCellType {
+    func cellRepresentation() -> AutoLayoutRepresentation {
+        switch self {
+        case .category:
+            return CategoryCell(fileName: self.fileName, identifier: self.identifier)
+        }
+    }
+}
+
+class CollectionViewCellFactory {
+    static func createCell(cellType: CollectionViewCellType, for collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cellRepresentation = cellType.cellRepresentation()
+        
+        //Pegamos em cache o arquivo da xib e armazenamos ela nessa variável
+        let uiNibCell: UINib = UINib(nibName: cellRepresentation.fileName, bundle: nil)
+        
+        //Registramos a celula na table view
+        collectionView.register(uiNibCell, forCellWithReuseIdentifier: cellRepresentation.identifier)
+       
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellRepresentation.identifier, for: indexPath)
+        
+        return cell
+    }
+}
+
+
+

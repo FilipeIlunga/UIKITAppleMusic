@@ -102,7 +102,7 @@
         <scene sceneID="UYA-q9-RXD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Lr-Iu-Dke" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="b2M-S9-G3v"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="musicSquare" id="b2M-S9-G3v"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3mS-NS-Lhb">
@@ -127,6 +127,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="musicSquare" width="21" height="27"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

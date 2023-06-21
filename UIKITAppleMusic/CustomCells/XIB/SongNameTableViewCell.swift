@@ -1,9 +1,11 @@
 //
-//  SongNameTableViewCell.swift
+//  File.swift
 //  UIKITAppleMusic
 //
-//  Created by Raquel Ramos on 20/06/23.
+//  Created by Raquel Ramos on 21/06/23.
 //
+
+import Foundation
 
 import UIKit
 

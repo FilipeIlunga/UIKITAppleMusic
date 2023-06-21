@@ -19,6 +19,7 @@ enum TypeOfViewController {
     case library
     case favorites
     case search
+    case libraryCollection
     case playlist
     case songs
     
@@ -31,6 +32,8 @@ enum TypeOfViewController {
             return "DetailViewViewControllerID"
         case .search:
             return ""
+        case .libraryCollection:
+            return "LibraryCollectionID"
         case .playlist:
             return "PlaylistViewController"
         case .songs:
@@ -44,6 +47,8 @@ enum TypeOfViewController {
             return "Main"
         case .favorites:
             return "Main"
+        case .libraryCollection:
+            return "LibraryCollection"
         case .search:
             return "Main"
         case .playlist:
