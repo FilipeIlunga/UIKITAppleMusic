@@ -9,7 +9,7 @@ import UIKit
 
 class FavoritesViewController: UIViewController {
     
-    let favoriteMusics: [Music] = []
+    let favoriteMusics: [Music] = try! MusicService().getAllMusics()
     
     @IBOutlet weak var tableView: UITableView!
     

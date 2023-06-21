@@ -31,10 +31,17 @@ fileprivate struct EmptyFavorityCell: AutoLayoutRepresentation {
     var identifier: String
 }
 
+fileprivate struct AlbumImageCell: AutoLayoutRepresentation{
+    var bundle: Bundle?
+    var fileName: String
+    var identifier: String
+}
+
 enum CellType {
     //MARK: 2 - Adicionar uma case  dela na cellType
     case musicRow
     case emptyFavorite
+    case albumImage
     
     // id da xib
     var identifier: String {
@@ -43,6 +50,8 @@ enum CellType {
             return "musicRowCellID"
         case .emptyFavorite:
             return "emptyFavoriteCell"
+        case .albumImage:
+            return "AlbumImage"
         }
     }
     
@@ -53,6 +62,8 @@ enum CellType {
             return "MusicRowTableViewCell"
         case .emptyFavorite:
             return "EmptyFavoriteTableViewCell"
+        case .albumImage:
+            return "AlbumImageTableViewCell"
         }
     }
 }
@@ -65,6 +76,8 @@ extension CellType {
             return MusicRowCell(fileName: self.fileName, identifier: self.identifier)
         case .emptyFavorite:
             return EmptyFavorityCell(fileName: self.fileName, identifier: self.identifier)
+        case .albumImage:
+            return AlbumImageCell(fileName: self.fileName, identifier: self.identifier)
         }
     }
 }
