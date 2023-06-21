@@ -12,24 +12,33 @@ class PlaylistViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var playlistTableView: UITableView!
     let album: String = "2I6IMEnTRj1fceLJL1bU4X"
     //ajeitar com a help da mari dps
-    let playlistSongs: [Music] = try! MusicService().getAllMusics()
+    var playlistSongs: [Music] = []
+    
+    func setPlaylist() {
+        playlistSongs  =  try! MusicService().getAllMusics().filter({ music in
+            music.artist == albumAleatoria
+        })
+    }
     let CellId: String = "nameCell"
+    
+    let albumAleatoria: String = try! MusicService().getAllMusics()[0].artist
     
     override func viewDidLoad() {
         super.viewDidLoad()
         playlistTableView.dataSource = self
         title = "Playlist"
         //navigationController?.navigationBar.prefersLargeTitles = false
-        
+        setPlaylist()
         // Do any additional setup after loading the view.
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 || section == 1{
             return 1
         }
         //quando pegar as musicas, colocar o .count
-        else { return 10 }
+        else { return playlistSongs.count }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,7 +49,7 @@ class PlaylistViewController: UIViewController, UITableViewDataSource {
         var cell = UITableViewCell()
         if indexPath.section == 0 {
            let customCell = TableViewCellFactory.createCell(cellType: .albumImage, for: tableView, indexPath: indexPath) as! AlbumImageTableViewCell
-            customCell.albumImage.image = UIImage(named: album)
+            customCell.albumImage.image = UIImage(named: playlistSongs[0].id)
             cell = customCell
         
         } else if indexPath.section == 1 {
@@ -50,11 +59,8 @@ class PlaylistViewController: UIViewController, UITableViewDataSource {
         else {
             let musicRowcell = TableViewCellFactory.createCell(cellType: .musicRow, for: tableView, indexPath: indexPath) as! MusicRowTableViewCell
             
-            let music = playlistSongs[indexPath.row]
-            
-            musicRowcell.tag = indexPath.row
-            
-            musicRowcell.setupCell(music: music, showFavorite: false)
+
+            musicRowcell.setupCell(music: playlistSongs[indexPath.row], showFavorite: false)
             cell = musicRowcell
         }
         return cell
