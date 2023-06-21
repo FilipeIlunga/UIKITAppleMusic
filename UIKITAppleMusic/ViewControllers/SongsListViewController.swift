@@ -39,5 +39,13 @@ class SongsListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     //fazer a parte de navegação para a parte de tocar musica
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let playingSongViewController = ViewControllerFactory.viewController(for: .individualSong) as! PlayingSongViewController
+        let music = songs[indexPath.row]
+        playingSongViewController.musica = music
+        
+        self.present(playingSongViewController, animated: true)
+        }
+    
     
 }

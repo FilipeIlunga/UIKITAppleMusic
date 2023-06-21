@@ -56,6 +56,10 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
             let songsListViewController = ViewControllerFactory.viewController(for: .songs) as! SongsListViewController
             
             navigationController?.pushViewController(songsListViewController, animated: true)
+        } else if indexPath.row == 0 {
+            let playlistViewController = ViewControllerFactory.viewController(for: .playlist) as! PlaylistViewController
+            navigationController?.pushViewController(playlistViewController, animated: true)
+            
         }
     }
 }
