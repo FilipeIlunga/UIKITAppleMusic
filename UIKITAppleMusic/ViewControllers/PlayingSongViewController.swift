@@ -46,12 +46,14 @@ class PlayingSongViewController: UIViewController, UITableViewDataSource, UITabl
             let album = musica.id //??????????
            let customCell = TableViewCellFactory.createCell(cellType: .albumImage, for: tableView, indexPath: indexPath) as! AlbumImageTableViewCell
             customCell.albumImage.image = UIImage(named: album)
+            customCell.albumImage.layer.cornerRadius = 12
             cell = customCell
             
         } else if indexPath.section == 1 {
             let customCell = playingSong.dequeueReusableCell(withIdentifier: CellID, for: indexPath) as! SongNameTableViewCell
             customCell.songName.text = musica.title
             customCell.songGroupName.text = musica.artist
+            customCell.progressBar.progressTintColor = .lightGray
             cell = customCell
         }
         return cell

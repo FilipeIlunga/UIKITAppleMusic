@@ -13,6 +13,7 @@ class SongNameTableViewCell: UITableViewCell {
 
     @IBOutlet weak var songName: UILabel!
     @IBOutlet weak var songGroupName: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     var Musica: Music?
     
@@ -22,7 +23,6 @@ class SongNameTableViewCell: UITableViewCell {
         
     }
     
-    //func setCell(movie: Movie)
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

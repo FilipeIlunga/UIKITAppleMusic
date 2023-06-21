@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IPL-me-8Yb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IPL-me-8Yb">
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -61,6 +61,22 @@
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DQL-nS-hEd">
                                                     <rect key="frame" x="20" y="87.666666666666671" width="353" height="4"/>
                                                 </progressView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dri-26-LPK">
+                                                    <rect key="frame" x="178" y="154" width="37" height="29"/>
+                                                    <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="33" id="bEL-EY-dCn"/>
+                                                        <constraint firstAttribute="width" constant="37" id="eK9-wd-W0c"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forward.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eut-hd-LgK">
+                                                    <rect key="frame" x="237" y="154.66666666666666" width="48" height="28"/>
+                                                    <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="33" id="Qld-2E-GLY"/>
+                                                        <constraint firstAttribute="width" constant="48" id="mdW-Wi-L4F"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="269" translatesAutoresizingMaskIntoConstraints="NO" id="QvG-6P-nmK">
                                                     <rect key="frame" x="20" y="99.666666666666671" width="346" height="20.333333333333329"/>
                                                     <subviews>
@@ -78,49 +94,35 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfg-Bh-CA1">
-                                                    <rect key="frame" x="113" y="161" width="220" height="33"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backward.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FUu-mQ-N3e">
-                                                            <rect key="frame" x="0.0" y="2.6666666666666643" width="48" height="28"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="33" id="aSI-RU-W6v"/>
-                                                                <constraint firstAttribute="width" constant="48" id="aZF-GG-WFu"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dri-26-LPK">
-                                                            <rect key="frame" x="65" y="1.9999999999999982" width="37" height="29"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="33" id="bEL-EY-dCn"/>
-                                                                <constraint firstAttribute="width" constant="37" id="eK9-wd-W0c"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forward.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eut-hd-LgK">
-                                                            <rect key="frame" x="119" y="2.6666666666666643" width="101" height="28"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="33" id="Qld-2E-GLY"/>
-                                                                <constraint firstAttribute="width" constant="48" id="mdW-Wi-L4F"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                    </subviews>
-                                                </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backward.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FUu-mQ-N3e">
+                                                    <rect key="frame" x="108" y="154.66666666666666" width="48" height="28"/>
+                                                    <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="33" id="SEv-PZ-KOy"/>
+                                                        <constraint firstAttribute="width" constant="48" id="cP8-c7-vtS"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="pfg-Bh-CA1" secondAttribute="trailing" constant="67" id="6Z5-cg-KEb"/>
-                                                <constraint firstItem="pfg-Bh-CA1" firstAttribute="leading" secondItem="2N6-vA-iXS" secondAttribute="leadingMargin" constant="66" id="Bl5-8C-tC4"/>
+                                                <constraint firstItem="dri-26-LPK" firstAttribute="centerX" secondItem="2N6-vA-iXS" secondAttribute="centerX" id="AZL-B4-DQ9"/>
                                                 <constraint firstItem="bhc-sk-PFt" firstAttribute="trailing" secondItem="2N6-vA-iXS" secondAttribute="trailingMargin" id="DgJ-Wy-DtE"/>
+                                                <constraint firstItem="eut-hd-LgK" firstAttribute="leading" secondItem="dri-26-LPK" secondAttribute="trailing" constant="22" id="K0k-O7-y6M"/>
                                                 <constraint firstItem="V8z-Bx-a4b" firstAttribute="top" secondItem="2N6-vA-iXS" secondAttribute="topMargin" constant="4" id="SKG-hL-0RL"/>
                                                 <constraint firstItem="V8z-Bx-a4b" firstAttribute="leading" secondItem="2N6-vA-iXS" secondAttribute="leadingMargin" constant="4" id="Srb-cL-bN3"/>
                                                 <constraint firstItem="DQL-nS-hEd" firstAttribute="top" secondItem="V8z-Bx-a4b" secondAttribute="bottom" constant="24" id="TM9-Fc-lGD"/>
                                                 <constraint firstItem="bhc-sk-PFt" firstAttribute="top" secondItem="2N6-vA-iXS" secondAttribute="topMargin" constant="12" id="Vst-NO-uG8"/>
+                                                <constraint firstItem="dri-26-LPK" firstAttribute="leading" secondItem="FUu-mQ-N3e" secondAttribute="trailing" constant="22" id="XqZ-J5-6Dg"/>
                                                 <constraint firstItem="DQL-nS-hEd" firstAttribute="trailing" secondItem="2N6-vA-iXS" secondAttribute="trailingMargin" id="bs8-WV-RdZ"/>
+                                                <constraint firstItem="dri-26-LPK" firstAttribute="top" secondItem="QvG-6P-nmK" secondAttribute="bottom" constant="32" id="d6L-zW-ITA"/>
+                                                <constraint firstItem="eut-hd-LgK" firstAttribute="top" secondItem="QvG-6P-nmK" secondAttribute="bottom" constant="32" id="jEg-FL-eFJ"/>
+                                                <constraint firstItem="FUu-mQ-N3e" firstAttribute="top" secondItem="QvG-6P-nmK" secondAttribute="bottom" constant="32" id="lxm-dd-ft8"/>
                                                 <constraint firstItem="QvG-6P-nmK" firstAttribute="top" secondItem="DQL-nS-hEd" secondAttribute="bottom" constant="8" id="pgQ-4V-AFR"/>
                                                 <constraint firstItem="DQL-nS-hEd" firstAttribute="leading" secondItem="2N6-vA-iXS" secondAttribute="leadingMargin" id="qaW-7W-GR8"/>
                                                 <constraint firstItem="QvG-6P-nmK" firstAttribute="leading" secondItem="2N6-vA-iXS" secondAttribute="leadingMargin" id="vmW-r0-PRb"/>
-                                                <constraint firstItem="pfg-Bh-CA1" firstAttribute="top" secondItem="QvG-6P-nmK" secondAttribute="bottom" constant="40" id="xkc-Nz-5iR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="progressBar" destination="DQL-nS-hEd" id="va4-3y-AiP"/>
                                             <outlet property="songGroupName" destination="7rQ-Kd-ikS" id="tg1-jU-Yg9"/>
                                             <outlet property="songName" destination="yTU-YY-g1s" id="RDz-7h-Imt"/>
                                         </connections>
