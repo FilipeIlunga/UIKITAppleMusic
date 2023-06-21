@@ -19,6 +19,7 @@ enum TypeOfViewController {
     case library
     case favorites
     case search
+    case libraryCollection
     
     var storyboardId: String {
         #warning("COLOCAR OS NOMES PLSSS")
@@ -29,6 +30,8 @@ enum TypeOfViewController {
             return "DetailViewViewControllerID"
         case .search:
             return ""
+        case .libraryCollection:
+            return "LibraryCollectionID"
         }
     }
     
@@ -38,6 +41,8 @@ enum TypeOfViewController {
             return "Main"
         case .favorites:
             return "Main"
+        case .libraryCollection:
+            return "LibraryCollection"
         case .search:
             return "Main"
         }

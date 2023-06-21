@@ -22,6 +22,26 @@ struct Music: Hashable, Decodable {
     }
 }
 
+//MARK: - MusicCollectionCategory
+enum MusicCollectionCategory: CaseIterable {
+    case spatialAudio
+    case pop
+    case metal
+    case hits
+    case brazillianPop
+    
+    var description: String {
+        switch self {
+            case .spatialAudio: return "Spatial Audio"
+            case .pop: return "Pop"
+            case .metal: return "Metal"
+            case .hits: return "Hits"
+            case .brazillianPop: return "Brazillian Pop"
+            
+        }
+    }
+}
+
 // MARK: - MusicCollectionType
 enum MusicCollectionType: String, Decodable, CaseIterable {
     /// Music collection types and variations
@@ -243,7 +263,7 @@ final class MusicService {
     ///
     /// - Parameters:
     ///   - music: The music to be removed from queue
-    ///   
+    ///
     func removeFromQueue(music: Music) {
         queue.nextInCollection.removeAll { $0 == music }
         queue.nextSuggested.removeAll { $0 == music }
