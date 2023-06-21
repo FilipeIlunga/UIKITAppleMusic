@@ -44,14 +44,18 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // album|artists
         if [1,3].contains(indexPath.row) {
-            let vc = ViewControllerFactory.viewController(for: .libraryCollection) as! LibraryCollectionViewController
+            let libraryCollectionViewController = ViewControllerFactory.viewController(for: .libraryCollection) as! LibraryCollectionViewController
             
-            vc.title = collection[indexPath.row].description
+            libraryCollectionViewController.title = collection[indexPath.row].description
             
-            vc.navigationController?.navigationBar.prefersLargeTitles = false
+            libraryCollectionViewController.navigationController?.navigationBar.prefersLargeTitles = false
             
-            vc.musicCategorires = MusicCollectionCategory.allCases
-            navigationController?.pushViewController(vc, animated: true)
+            libraryCollectionViewController.musicCategorires = MusicCollectionCategory.allCases
+            navigationController?.pushViewController(libraryCollectionViewController, animated: true)
+        } else if indexPath.row == 2 {
+            let songsListViewController = ViewControllerFactory.viewController(for: .songs) as! SongsListViewController
+            
+            navigationController?.pushViewController(songsListViewController, animated: true)
         }
     }
 }

@@ -20,6 +20,8 @@ enum TypeOfViewController {
     case favorites
     case search
     case libraryCollection
+    case playlist
+    case songs
     
     var storyboardId: String {
         #warning("COLOCAR OS NOMES PLSSS")
@@ -32,6 +34,10 @@ enum TypeOfViewController {
             return ""
         case .libraryCollection:
             return "LibraryCollectionID"
+        case .playlist:
+            return "PlaylistViewController"
+        case .songs:
+            return "SongsListViewController"
         }
     }
     
@@ -45,6 +51,10 @@ enum TypeOfViewController {
             return "LibraryCollection"
         case .search:
             return "Main"
+        case .playlist:
+            return "PlaylistView"
+        case .songs:
+            return "SongsListView"
         }
     }
 }

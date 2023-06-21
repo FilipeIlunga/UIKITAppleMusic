@@ -70,11 +70,33 @@
                     <navigationItem key="navigationItem" title="Library" largeTitleDisplayMode="always" id="k8q-eQ-CbC"/>
                     <connections>
                         <outlet property="libraryCell" destination="5fh-TC-avC" id="1Dl-fe-Hap"/>
+                        <segue destination="4DD-gh-gML" kind="show" id="Yay-yp-54v"/>
+                        <segue destination="GCd-H4-ims" kind="show" id="SyH-ah-DFr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEP-71-peb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1729.0076335877861" y="-34.507042253521128"/>
+        </scene>
+        <!--SongsListView-->
+        <scene sceneID="pfx-Wm-dns">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SongsListView" id="GCd-H4-ims" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gji-p2-KBD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4NY-bL-65j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2446" y="-137"/>
+        </scene>
+        <!--PlaylistView-->
+        <scene sceneID="9Tg-qP-t1u">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlaylistView" id="4DD-gh-gML" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Jsd-ne-XqT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pl2-sd-R2C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2450" y="-10"/>
         </scene>
         <!--Item-->
         <scene sceneID="UYA-q9-RXD">
