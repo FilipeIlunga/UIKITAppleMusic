@@ -11,7 +11,7 @@ class PlayingSongViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var playingSong: UITableView!
     //mudar depois pq ele vai receber de outro lugar isso
-    var musica: Music = try! MusicService().getAllMusics()[0]
+    var musica: Music?
     let CellID: String = "SongName"
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,16 +43,17 @@ class PlayingSongViewController: UIViewController, UITableViewDataSource, UITabl
         var cell = UITableViewCell()
         
         if indexPath.section == 0 {
-            let album = musica.id //??????????
+          
+            let album = musica!.id //??????????
            let customCell = TableViewCellFactory.createCell(cellType: .albumImage, for: tableView, indexPath: indexPath) as! AlbumImageTableViewCell
-            customCell.albumImage.image = UIImage(named: album)
             customCell.albumImage.layer.cornerRadius = 12
-            cell = customCell
+            customCell.albumImage.image = UIImage(named: album)
             
+            cell = customCell
         } else if indexPath.section == 1 {
             let customCell = playingSong.dequeueReusableCell(withIdentifier: CellID, for: indexPath) as! SongNameTableViewCell
-            customCell.songName.text = musica.title
-            customCell.songGroupName.text = musica.artist
+            customCell.songName.text = musica?.title
+            customCell.songGroupName.text = musica?.artist
             customCell.progressBar.progressTintColor = .lightGray
             cell = customCell
         }
