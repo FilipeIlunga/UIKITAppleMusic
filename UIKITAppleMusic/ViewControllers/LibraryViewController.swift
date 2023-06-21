@@ -7,30 +7,31 @@
 
 import UIKit
 
-class LibraryViewController: UIViewController, UITableViewDataSource {
+class LibraryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
     @IBOutlet weak var libraryCell: UITableView!
     
-    var itens: [String] = ["Playlists", "Artists", "Songs"]
-    var icons: [String] = ["music.note.list", "music.mic", "music.note"]
     let cellID: String = "LibraryCell"
+    
+    var collection: [MusicCollectionType] = MusicCollectionType.allCases
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Library"
         navigationController?.navigationBar.prefersLargeTitles = true
         libraryCell.dataSource = self
+        libraryCell.delegate = self
         // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itens.count
+        return collection.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let icon = icons[indexPath.row]
-        let iten = itens[indexPath.row]
+        let icon = collection[indexPath.row].icon
+        let iten = collection[indexPath.row].description
         
         let cell = libraryCell.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! LibraryTableViewCell
         cell.accessoryType = .disclosureIndicator
@@ -40,14 +41,17 @@ class LibraryViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // album|artists
+        if [1,3].contains(indexPath.row) {
+            let vc = ViewControllerFactory.viewController(for: .libraryCollection) as! LibraryCollectionViewController
+            
+            vc.title = collection[indexPath.row].description
+            
+            vc.navigationController?.navigationBar.prefersLargeTitles = false
+            
+            vc.musicCategorires = MusicCollectionCategory.allCases
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
-    */
-
 }

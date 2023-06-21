@@ -37,7 +37,7 @@
                             <constraint firstItem="uC4-av-het" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Zbo-XE-WYb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="whC-SQ-aTq"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="whC-SQ-aTq"/>
                     <connections>
                         <outlet property="collectionView" destination="uC4-av-het" id="IcP-Q2-fMO"/>
                     </connections>
