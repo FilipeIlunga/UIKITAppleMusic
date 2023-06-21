@@ -18,6 +18,8 @@
 		230EFDA42A4216B2003BA702 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFDA32A4216B2003BA702 /* SearchViewController.swift */; };
 		230EFDA72A423115003BA702 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFDA52A423115003BA702 /* CategoryCollectionViewCell.swift */; };
 		230EFDA82A423115003BA702 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230EFDA62A423115003BA702 /* CategoryCollectionViewCell.xib */; };
+		230EFDAA2A433411003BA702 /* LibraryCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230EFDA92A433411003BA702 /* LibraryCollection.storyboard */; };
+		230EFDAC2A433444003BA702 /* LibraryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EFDAB2A433444003BA702 /* LibraryCollectionViewController.swift */; };
 		23EA51212A40D0B5008658B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51202A40D0B5008658B0 /* AppDelegate.swift */; };
 		23EA51232A40D0B5008658B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51222A40D0B5008658B0 /* SceneDelegate.swift */; };
 		23EA51252A40D0B5008658B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA51242A40D0B5008658B0 /* ViewController.swift */; };
@@ -47,6 +49,8 @@
 		230EFDA32A4216B2003BA702 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		230EFDA52A423115003BA702 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		230EFDA62A423115003BA702 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		230EFDA92A433411003BA702 /* LibraryCollection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LibraryCollection.storyboard; sourceTree = "<group>"; };
+		230EFDAB2A433444003BA702 /* LibraryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewController.swift; sourceTree = "<group>"; };
 		23EA511D2A40D0B5008658B0 /* UIKITAppleMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKITAppleMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EA51202A40D0B5008658B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EA51222A40D0B5008658B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				230EFD862A40E4D2003BA702 /* Favorite.storyboard */,
 				CC0B8EC82A40E35100724D5C /* LibraryStoryboard.storyboard */,
 				230EFDA12A421669003BA702 /* SearchView.storyboard */,
+				230EFDA92A433411003BA702 /* LibraryCollection.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 				230EFD882A40E6D9003BA702 /* FavoritesViewController.swift */,
 				CC0B8EC62A40E31400724D5C /* LibraryViewController.swift */,
 				230EFDA32A4216B2003BA702 /* SearchViewController.swift */,
+				230EFDAB2A433444003BA702 /* LibraryCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 				23EA512D2A40D0B6008658B0 /* LaunchScreen.storyboard in Resources */,
 				230EFD932A41CF92003BA702 /* EmptyFavoriteTableViewCell.xib in Resources */,
 				23EA514B2A40D643008658B0 /* Assets.xcassets in Resources */,
+				230EFDAA2A433411003BA702 /* LibraryCollection.storyboard in Resources */,
 				23EA51282A40D0B5008658B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +289,7 @@
 				230EFDA42A4216B2003BA702 /* SearchViewController.swift in Sources */,
 				23EA51212A40D0B5008658B0 /* AppDelegate.swift in Sources */,
 				23EA51232A40D0B5008658B0 /* SceneDelegate.swift in Sources */,
+				230EFDAC2A433444003BA702 /* LibraryCollectionViewController.swift in Sources */,
 				230EFD892A40E6D9003BA702 /* FavoritesViewController.swift in Sources */,
 				CC0B8EC72A40E31400724D5C /* LibraryViewController.swift in Sources */,
 				23EA514F2A40D643008658B0 /* MusicService.swift in Sources */,
