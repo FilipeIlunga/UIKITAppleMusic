@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IPL-me-8Yb">
-                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <rect key="frame" x="0.0" y="135.33333333333331" width="393" height="716.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongName" rowHeight="268" id="eEY-TC-GsQ" customClass="SongNameTableViewCell" customModule="UIKITAppleMusic" customModuleProvider="target">
@@ -129,14 +129,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3p-SQ-tuK">
+                                <rect key="frame" x="16" y="83" width="361" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="IPL-me-8Yb" secondAttribute="bottom" constant="-34" id="Izx-7O-f5N"/>
                             <constraint firstItem="IPL-me-8Yb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="PhC-c1-4xc"/>
+                            <constraint firstItem="IPL-me-8Yb" firstAttribute="top" secondItem="I3p-SQ-tuK" secondAttribute="bottom" constant="32" id="X2a-V7-uRJ"/>
                             <constraint firstAttribute="bottom" secondItem="IPL-me-8Yb" secondAttribute="bottom" id="eTC-e8-oke"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="I3p-SQ-tuK" secondAttribute="trailing" constant="16" id="gii-ZW-YKz"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IPL-me-8Yb" secondAttribute="trailing" id="tGx-P3-U3A"/>
-                            <constraint firstItem="IPL-me-8Yb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ySm-ep-cP2"/>
+                            <constraint firstItem="I3p-SQ-tuK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="xRp-Bc-5fX"/>
+                            <constraint firstItem="I3p-SQ-tuK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="ygp-gi-Kfx"/>
                         </constraints>
                     </view>
                     <connections>
