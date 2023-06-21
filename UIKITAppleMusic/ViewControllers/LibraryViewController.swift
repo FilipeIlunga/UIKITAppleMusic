@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LibraryViewController: UIViewController, UITableViewDataSource {
+class LibraryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
     @IBOutlet weak var libraryCell: UITableView!
@@ -21,6 +21,7 @@ class LibraryViewController: UIViewController, UITableViewDataSource {
         title = "Library"
         navigationController?.navigationBar.prefersLargeTitles = true
         libraryCell.dataSource = self
+        libraryCell.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -39,6 +40,17 @@ class LibraryViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let playlistVC = ViewControllerFactory.viewController(for: .playlist)
+            navigationController?.pushViewController(playlistVC, animated: true)
+        } else if indexPath.row == 2 {
+            let songsListVC = ViewControllerFactory.viewController(for: .songs)
+            navigationController?.pushViewController(songsListVC, animated: true)
+        }
+    }
+    
     
     /*
     // MARK: - Navigation
