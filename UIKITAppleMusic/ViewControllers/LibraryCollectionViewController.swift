@@ -17,7 +17,6 @@ class LibraryCollectionViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        navigationController?.navigationBar.prefersLargeTitles = false 
     }
     
 }

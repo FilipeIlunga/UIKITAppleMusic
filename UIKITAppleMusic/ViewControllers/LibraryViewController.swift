@@ -12,9 +12,9 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var libraryCell: UITableView!
     
-    var itens: [String] = ["Playlists", "Artists", "Songs"]
-    var icons: [String] = ["music.note.list", "music.mic", "music.note"]
     let cellID: String = "LibraryCell"
+    
+    var collection: [MusicCollectionType] = MusicCollectionType.allCases
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +26,12 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itens.count
+        return collection.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let icon = icons[indexPath.row]
-        let iten = itens[indexPath.row]
+        let icon = collection[indexPath.row].icon
+        let iten = collection[indexPath.row].description
         
         let cell = libraryCell.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! LibraryTableViewCell
         cell.accessoryType = .disclosureIndicator
@@ -42,24 +42,20 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            let playlistVC = ViewControllerFactory.viewController(for: .playlist)
-            navigationController?.pushViewController(playlistVC, animated: true)
+        // album|artists
+        if [1,3].contains(indexPath.row) {
+            let libraryCollectionViewController = ViewControllerFactory.viewController(for: .libraryCollection) as! LibraryCollectionViewController
+            
+            libraryCollectionViewController.title = collection[indexPath.row].description
+            
+            libraryCollectionViewController.navigationController?.navigationBar.prefersLargeTitles = false
+            
+            libraryCollectionViewController.musicCategorires = MusicCollectionCategory.allCases
+            navigationController?.pushViewController(libraryCollectionViewController, animated: true)
         } else if indexPath.row == 2 {
-            let songsListVC = ViewControllerFactory.viewController(for: .songs)
-            navigationController?.pushViewController(songsListVC, animated: true)
+            let songsListViewController = ViewControllerFactory.viewController(for: .songs) as! SongsListViewController
+            
+            navigationController?.pushViewController(songsListViewController, animated: true)
         }
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
