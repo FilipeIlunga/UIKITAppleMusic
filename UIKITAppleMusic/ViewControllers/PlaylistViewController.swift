@@ -61,8 +61,14 @@ class PlaylistViewController: UIViewController, UITableViewDataSource {
         else {
             let musicRowcell = TableViewCellFactory.createCell(cellType: .musicRow, for: tableView, indexPath: indexPath) as! MusicRowTableViewCell
             
-
-            musicRowcell.setupCell(music: playlistSongs[indexPath.row], showFavorite: false)
+            let music = playlistSongs[indexPath.row]
+            
+            musicRowcell.tag = indexPath.row
+            
+            let isFavorite: Bool = MusicService.shared.isFavorite(music: music)
+            
+            musicRowcell.setCellInfo(music: music, isFavorite: isFavorite)
+            
             cell = musicRowcell
         }
         return cell

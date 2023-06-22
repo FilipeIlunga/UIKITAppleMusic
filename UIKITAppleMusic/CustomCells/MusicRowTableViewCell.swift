@@ -14,41 +14,41 @@ class MusicRowTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     
-    var isFavorite: Bool = false
-
+    var music: Music?
+    
     @IBOutlet weak var favortieButton: UIButton!
+    weak var delegate: FavoriteButtonDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         posterImage.layer.cornerRadius = 4
-        
     }
     
-    func setupCell(music: Music,showFavorite: Bool = false) {
-        setCellInfo(music: music)
-        if showFavorite {
+    func setCellInfo(music: Music, isFavorite: Bool, showFavoriteButton: Bool = false) {
+        
+        posterImage.image = UIImage(named: music.id)
+        titleLabel.text = music.title
+        artistLabel.text = music.artist
+        
+        if isFavorite {
+            favortieButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        } else {
+            favortieButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
+        
+        if showFavoriteButton {
             favortieButton.isHidden = false
         } else {
             favortieButton.isHidden = true
             accessoryType = .disclosureIndicator
         }
     }
-    
-    func setCellInfo(music: Music) {
-        posterImage.image = UIImage(named: music.id)
-        titleLabel.text = music.title
-        artistLabel.text = music.artist
-    }
-    
-    
+        
     @IBAction func favoriteButtonDidTapped(_ sender: Any) {
-        if isFavorite {
-            favortieButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-            isFavorite = true
-        } else {
-            favortieButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-            isFavorite = false
+        guard let music = music else {
+            return
         }
+        delegate?.favoriteButtonDidTapped(music: music)
     }
     
 }
