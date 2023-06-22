@@ -11,7 +11,7 @@ class SongsListViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var songList: UITableView!
     
-    let songs: [Music] = try! MusicService().getAllMusics()
+    let songs: [Music] = MusicService.shared.getAllMusics()
     override func viewDidLoad() {
         super.viewDidLoad()
         songList.dataSource = self
@@ -22,7 +22,7 @@ class SongsListViewController: UIViewController, UITableViewDataSource, UITableV
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 18
+        return songs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,16 +30,11 @@ class SongsListViewController: UIViewController, UITableViewDataSource, UITableV
         let musicRowcell = TableViewCellFactory.createCell(cellType: .musicRow, for: tableView, indexPath: indexPath) as! MusicRowTableViewCell
         
         let song = songs[indexPath.row]
-        
-        musicRowcell.tag = indexPath.row
-        
         let isFavorite: Bool = MusicService.shared.isFavorite(music: song)
-        
         musicRowcell.setCellInfo(music: song, isFavorite: isFavorite)
         
         return musicRowcell
     }
-    //fazer a parte de navegação para a parte de tocar musica
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let playingSongViewController = ViewControllerFactory.viewController(for: .individualSong) as! PlayingSongViewController

@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="nameCell" rowHeight="198" id="JVl-kr-gx5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="nameCell" rowHeight="198" id="JVl-kr-gx5" customClass="PlaylistNameTableViewCell" customModule="UIKITAppleMusic" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="198"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JVl-kr-gx5" id="ahe-vS-HIe">
@@ -59,6 +59,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <connections>
+                                            <outlet property="name" destination="4cb-ta-LT9" id="m4L-Qu-EEk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

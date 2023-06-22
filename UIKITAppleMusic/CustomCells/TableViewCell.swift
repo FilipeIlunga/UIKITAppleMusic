@@ -1,30 +1,29 @@
 //
-//  File.swift
+//  TableViewCell.swift
 //  UIKITAppleMusic
 //
 //  Created by Raquel Ramos on 21/06/23.
 //
 
-import Foundation
-
 import UIKit
+
 
 protocol FavoriteButtonDelegate: AnyObject {
     func favoriteButtonDidTapped(music: Music)
 }
-
-class SongNameTableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var songName: UILabel!
     @IBOutlet weak var songGroupName: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var name: UILabel!
     
     @IBOutlet weak var favoriteButton: UIButton!
     
     weak var delegate: FavoriteButtonDelegate?
     var isFavorite: Bool = true
     
-    var Musica: Music?
+    var cellMusic: Music?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,7 +33,7 @@ class SongNameTableViewCell: UITableViewCell {
     
     func setCellInfo(music: Music, isFavorite: Bool) {
         progressBar.progressTintColor = .lightGray
-
+        cellMusic = music
         songName.text = music.title
         songGroupName.text = music.artist
         if isFavorite {
@@ -45,7 +44,7 @@ class SongNameTableViewCell: UITableViewCell {
     }
     
     @IBAction func favoriteButtonDidTapped(_ sender: Any) {
-        guard let music = Musica else {
+        guard let music = cellMusic else {
             return
         }
         delegate?.favoriteButtonDidTapped(music: music)

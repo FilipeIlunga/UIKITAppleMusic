@@ -60,13 +60,18 @@ extension PlayingSongViewController: UITableViewDataSource {
             customCell.albumImage.image = UIImage(named: album)
             
             cell = customCell
-        } else if indexPath.section == 1 {
-            let customCell = playingSong.dequeueReusableCell(withIdentifier: CellID, for: indexPath) as! SongNameTableViewCell
+        } else if indexPath.section == 1 {            
             
-            customCell.Musica = musica!
-            
+
+            let customCell = playingSong.dequeueReusableCell(withIdentifier: CellID, for: indexPath) as! TableViewCell
             customCell.setCellInfo(music: musica!, isFavorite: MusicService.shared.isFavorite(music: musica!))
             customCell.delegate = self
+
+            customCell.progressBar.progressTintColor = .lightGray
+            
+            let timeInMin = musica!.length / 60.00
+            let duracao = Double(round(timeInMin * 100)/100)
+            customCell.name.text = String(duracao)
             cell = customCell
             
         }
