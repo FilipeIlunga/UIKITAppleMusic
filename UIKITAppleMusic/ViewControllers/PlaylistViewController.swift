@@ -15,19 +15,19 @@ class PlaylistViewController: UIViewController, UITableViewDataSource {
     var playlistSongs: [Music] = []
     
     func setPlaylist() {
-        playlistSongs  =  try! MusicService().getAllMusics().filter({ music in
+        playlistSongs  =  MusicService().getAllMusics().filter({ music in
             music.artist == albumAleatoria
         })
     }
     let CellId: String = "nameCell"
     
-    let albumAleatoria: String = try! MusicService().getAllMusics()[0].artist
+    let albumAleatoria: String = MusicService().getAllMusics()[0].artist
     
     override func viewDidLoad() {
         super.viewDidLoad()
         playlistTableView.dataSource = self
         title = "Playlist"
-        //navigationController?.navigationBar.prefersLargeTitles = false
+        
         setPlaylist()
         // Do any additional setup after loading the view.
     }
