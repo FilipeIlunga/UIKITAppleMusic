@@ -28,10 +28,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V8z-Bx-a4b">
-                                                    <rect key="frame" x="24.000000000000004" y="14.999999999999996" width="44.333333333333343" height="48.666666666666657"/>
+                                                    <rect key="frame" x="24" y="14.999999999999996" width="306" height="48.666666666666657"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTU-YY-g1s">
-                                                            <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="20.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="306" height="20.333333333333332"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20.333333333333332" id="RsO-VL-2fk"/>
                                                             </constraints>
@@ -40,7 +40,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rQ-Kd-ikS">
-                                                            <rect key="frame" x="0.0" y="28.333333333333336" width="44.333333333333336" height="20.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="28.333333333333336" width="306" height="20.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -50,14 +50,6 @@
                                                         <constraint firstAttribute="height" constant="48.670000000000002" id="10t-vS-st6"/>
                                                     </constraints>
                                                 </stackView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bhc-sk-PFt">
-                                                    <rect key="frame" x="318.66666666666669" y="25" width="54.333333333333314" height="30"/>
-                                                    <color key="tintColor" systemColor="opaqueSeparatorColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="bhc-sk-PFt" secondAttribute="height" multiplier="33:20" id="6Dy-xJ-w7c"/>
-                                                        <constraint firstAttribute="height" constant="33" id="kLH-bp-ASI"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DQL-nS-hEd">
                                                     <rect key="frame" x="20" y="87.666666666666671" width="353" height="4"/>
                                                 </progressView>
@@ -102,15 +94,29 @@
                                                         <constraint firstAttribute="width" constant="48" id="cP8-c7-vtS"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsF-7y-Q4I">
+                                                    <rect key="frame" x="340" y="27" width="33" height="33"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="33" id="Urv-bR-dKd"/>
+                                                        <constraint firstAttribute="height" constant="33" id="VpD-m1-cmy"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.91764706370000004" green="0.2588235438" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="favoriteButtonDidTapped:" destination="eEY-TC-GsQ" eventType="touchUpInside" id="QlS-85-LwK"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="dri-26-LPK" firstAttribute="centerX" secondItem="2N6-vA-iXS" secondAttribute="centerX" id="AZL-B4-DQ9"/>
-                                                <constraint firstItem="bhc-sk-PFt" firstAttribute="trailing" secondItem="2N6-vA-iXS" secondAttribute="trailingMargin" id="DgJ-Wy-DtE"/>
+                                                <constraint firstItem="IsF-7y-Q4I" firstAttribute="top" secondItem="2N6-vA-iXS" secondAttribute="topMargin" constant="16" id="DR1-7z-Ef7"/>
                                                 <constraint firstItem="eut-hd-LgK" firstAttribute="leading" secondItem="dri-26-LPK" secondAttribute="trailing" constant="22" id="K0k-O7-y6M"/>
+                                                <constraint firstItem="IsF-7y-Q4I" firstAttribute="leading" secondItem="V8z-Bx-a4b" secondAttribute="trailing" constant="10" id="LgO-SM-WYL"/>
+                                                <constraint firstItem="IsF-7y-Q4I" firstAttribute="trailing" secondItem="2N6-vA-iXS" secondAttribute="trailingMargin" id="RGm-8v-C9k"/>
                                                 <constraint firstItem="V8z-Bx-a4b" firstAttribute="top" secondItem="2N6-vA-iXS" secondAttribute="topMargin" constant="4" id="SKG-hL-0RL"/>
                                                 <constraint firstItem="V8z-Bx-a4b" firstAttribute="leading" secondItem="2N6-vA-iXS" secondAttribute="leadingMargin" constant="4" id="Srb-cL-bN3"/>
                                                 <constraint firstItem="DQL-nS-hEd" firstAttribute="top" secondItem="V8z-Bx-a4b" secondAttribute="bottom" constant="24" id="TM9-Fc-lGD"/>
-                                                <constraint firstItem="bhc-sk-PFt" firstAttribute="top" secondItem="2N6-vA-iXS" secondAttribute="topMargin" constant="12" id="Vst-NO-uG8"/>
                                                 <constraint firstItem="dri-26-LPK" firstAttribute="leading" secondItem="FUu-mQ-N3e" secondAttribute="trailing" constant="22" id="XqZ-J5-6Dg"/>
                                                 <constraint firstItem="DQL-nS-hEd" firstAttribute="trailing" secondItem="2N6-vA-iXS" secondAttribute="trailingMargin" id="bs8-WV-RdZ"/>
                                                 <constraint firstItem="dri-26-LPK" firstAttribute="top" secondItem="QvG-6P-nmK" secondAttribute="bottom" constant="32" id="d6L-zW-ITA"/>
@@ -122,6 +128,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="favoriteButton" destination="IsF-7y-Q4I" id="GGM-oS-kfs"/>
                                             <outlet property="progressBar" destination="DQL-nS-hEd" id="va4-3y-AiP"/>
                                             <outlet property="songGroupName" destination="7rQ-Kd-ikS" id="tg1-jU-Yg9"/>
                                             <outlet property="songName" destination="yTU-YY-g1s" id="RDz-7h-Imt"/>

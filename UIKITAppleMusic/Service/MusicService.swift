@@ -124,6 +124,7 @@ final class MusicService {
     private let allMusics: [Music]
     private var collections: Set<MusicCollection>
     
+    static let shared: MusicService = MusicService()
     /// The queue with the music being played and the next musics.
     private(set) var queue: Queue
     
@@ -146,14 +147,19 @@ final class MusicService {
     ///
     /// Loads data from the json files. Method may `throws` due to I/O errors.
     ///
-    init() throws {
+    init()  {
         // may the superior entity (if such exists) forgive me for such terrible practice :'//
-        let mockDataUrl = Bundle.main.url(forResource: "data", withExtension: "json")!
-        let data = try Data(contentsOf: mockDataUrl)
-        
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
-        self.collections = try decoder.decode(Set<MusicCollection>.self, from: data)
+        do {
+            let mockDataUrl = Bundle.main.url(forResource: "data", withExtension: "json")!
+            let data = try Data(contentsOf: mockDataUrl)
+            
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            self.collections = try decoder.decode(Set<MusicCollection>.self, from: data)
+        } catch {
+            collections = []
+        }
+
         self.allMusics = collections.flatMap(\.musics)
         
         self.queue = Queue(nowPlaying: nil, collection: nil, nextInCollection: [], nextSuggested: [])
@@ -166,6 +172,10 @@ final class MusicService {
     ///
     func loadLibrary() -> [MusicCollection] {
         collections.sorted { $0.referenceDate > $1.referenceDate }
+    }
+    
+    func isFavorite(music: Music) -> Bool {
+        return favoriteMusics.contains(music)
     }
     
     /// Retrieves a music collection upon a given collection ID
@@ -226,7 +236,7 @@ final class MusicService {
     ///   - isFavorite: Whether the music is favorited or not.
     ///
     func toggleFavorite(music: Music, isFavorite: Bool) {
-        if isFavorite {
+        if !isFavorite {
             favoriteMusics.append(music)
         } else {
             favoriteMusics.removeAll { $0 == music }

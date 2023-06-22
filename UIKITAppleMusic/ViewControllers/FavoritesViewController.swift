@@ -9,7 +9,7 @@ import UIKit
 
 class FavoritesViewController: UIViewController {
     
-    let favoriteMusics: [Music] = try! MusicService().getAllMusics()
+    var favoriteMusics: [Music] = MusicService.shared.favoriteMusics
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,17 +19,21 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        title = "Favorites"
         searchController.searchResultsUpdater = self
+
+        title = "Favorites"
         searchController.searchBar.placeholder = "Artists, Songs, Lyrics, and More"
         navigationItem.searchController = searchController
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-}
-
-extension FavoritesViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        
+    
+    override func viewWillAppear(_ animated: Bool) {
+        reloadData()
+    }
+    
+    func reloadData() {
+        favoriteMusics = MusicService.shared.favoriteMusics
+         tableView.reloadData()
     }
 }
 
@@ -40,6 +44,13 @@ extension FavoritesViewController:  UITableViewDelegate {
             return 292.0
         }
         return 74
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let playingViewControler = ViewControllerFactory.viewController(for: .individualSong) as! PlayingSongViewController
+        playingViewControler.musica = favoriteMusics[indexPath.row]
+        playingViewControler.delegate = self
+        self.present(playingViewControler, animated: true)
     }
 }
 
@@ -66,15 +77,37 @@ extension FavoritesViewController: UITableViewDataSource {
             let musicRowcell = TableViewCellFactory.createCell(cellType: .musicRow, for: tableView, indexPath: indexPath) as! MusicRowTableViewCell
             
             let music = favoriteMusics[indexPath.row]
+            musicRowcell.music = music
+            musicRowcell.delegate = self
             
-            musicRowcell.tag = indexPath.row
+            let isFavorite: Bool = MusicService.shared.isFavorite(music: music)
             
-            musicRowcell.setupCell(music: music, showFavorite: true)
+            musicRowcell.setCellInfo(music: music, isFavorite: isFavorite, showFavoriteButton: true)
             cell = musicRowcell
         }
-        
-        
         return cell
     }
-    
 }
+
+extension FavoritesViewController: FavoriteButtonDelegate {
+    func favoriteButtonDidTapped(music: Music) {
+        let isFavorite: Bool = MusicService.shared.isFavorite(music: music)
+        MusicService.shared.toggleFavorite(music: music, isFavorite: isFavorite)
+        favoriteMusics = MusicService.shared.favoriteMusics
+
+        tableView.reloadData()
+    }
+}
+
+extension FavoritesViewController: PlayingSongDelegate {
+    func favoriteHasToggled() {
+        reloadData()
+    }
+}
+
+extension FavoritesViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+}
+
