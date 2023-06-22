@@ -23,7 +23,7 @@ class TableViewCell: UITableViewCell {
     weak var delegate: FavoriteButtonDelegate?
     var isFavorite: Bool = true
     
-    var Musica: Music?
+    var cellMusic: Music?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,7 +33,7 @@ class TableViewCell: UITableViewCell {
     
     func setCellInfo(music: Music, isFavorite: Bool) {
         progressBar.progressTintColor = .lightGray
-
+        cellMusic = music
         songName.text = music.title
         songGroupName.text = music.artist
         if isFavorite {
@@ -44,7 +44,7 @@ class TableViewCell: UITableViewCell {
     }
     
     @IBAction func favoriteButtonDidTapped(_ sender: Any) {
-        guard let music = Musica else {
+        guard let music = cellMusic else {
             return
         }
         delegate?.favoriteButtonDidTapped(music: music)
