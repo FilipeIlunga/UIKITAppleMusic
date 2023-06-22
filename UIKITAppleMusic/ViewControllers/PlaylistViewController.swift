@@ -54,7 +54,10 @@ class PlaylistViewController: UIViewController, UITableViewDataSource {
             
             musicRowcell.tag = indexPath.row
             
-            musicRowcell.setupCell(music: music, showFavorite: false)
+            let isFavorite: Bool = MusicService.shared.isFavorite(music: music)
+            
+            musicRowcell.setCellInfo(music: music, isFavorite: isFavorite)
+            
             cell = musicRowcell
         }
         return cell

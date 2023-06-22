@@ -33,7 +33,9 @@ class SongsListViewController: UIViewController, UITableViewDataSource, UITableV
         
         musicRowcell.tag = indexPath.row
         
-        musicRowcell.setupCell(music: song, showFavorite: false)
+        let isFavorite: Bool = MusicService.shared.isFavorite(music: song)
+        
+        musicRowcell.setCellInfo(music: song, isFavorite: isFavorite)
         
         return musicRowcell
     }
