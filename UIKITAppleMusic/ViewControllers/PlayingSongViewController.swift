@@ -51,10 +51,14 @@ class PlayingSongViewController: UIViewController, UITableViewDataSource, UITabl
             
             cell = customCell
         } else if indexPath.section == 1 {
-            let customCell = playingSong.dequeueReusableCell(withIdentifier: CellID, for: indexPath) as! SongNameTableViewCell
+            let customCell = playingSong.dequeueReusableCell(withIdentifier: CellID, for: indexPath) as! TableViewCell
             customCell.songName.text = musica?.title
             customCell.songGroupName.text = musica?.artist
             customCell.progressBar.progressTintColor = .lightGray
+            
+            let timeInMin = musica!.length / 60.00
+            let duracao = Double(round(timeInMin * 100)/100)
+            customCell.name.text = String(duracao)
             cell = customCell
         }
         return cell

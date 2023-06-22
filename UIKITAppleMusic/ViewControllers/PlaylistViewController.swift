@@ -53,7 +53,9 @@ class PlaylistViewController: UIViewController, UITableViewDataSource {
             cell = customCell
         
         } else if indexPath.section == 1 {
-            let nameCell = playlistTableView.dequeueReusableCell(withIdentifier: CellId, for: indexPath)
+            let nameCell = playlistTableView.dequeueReusableCell(withIdentifier: CellId, for: indexPath) as! PlaylistNameTableViewCell
+            nameCell.name.text = playlistSongs[0].artist
+            
             cell = nameCell
         }
         else {

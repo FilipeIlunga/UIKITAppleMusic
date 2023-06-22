@@ -1,19 +1,18 @@
 //
-//  File.swift
+//  TableViewCell.swift
 //  UIKITAppleMusic
 //
 //  Created by Raquel Ramos on 21/06/23.
 //
 
-import Foundation
-
 import UIKit
 
-class SongNameTableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var songName: UILabel!
     @IBOutlet weak var songGroupName: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var name: UILabel!
     
     var Musica: Music?
     
