@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PlaylistViewController: UIViewController, UITableViewDataSource {
+class PlaylistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
     @IBOutlet weak var playlistTableView: UITableView!
     let album: String = "2I6IMEnTRj1fceLJL1bU4X"
@@ -26,6 +26,7 @@ class PlaylistViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         playlistTableView.dataSource = self
+        playlistTableView.delegate = self
         title = "Playlist"
         
         setPlaylist()
@@ -72,6 +73,15 @@ class PlaylistViewController: UIViewController, UITableViewDataSource {
             cell = musicRowcell
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2{
+            let playingSongViewController = ViewControllerFactory.viewController(for: .individualSong) as! PlayingSongViewController
+            let music = playlistSongs[indexPath.row]
+            playingSongViewController.musica = music
+            self.present(playingSongViewController, animated: true)
+        }
     }
     
     
