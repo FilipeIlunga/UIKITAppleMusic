@@ -69,9 +69,10 @@ extension PlayingSongViewController: UITableViewDataSource {
 
             customCell.progressBar.progressTintColor = .lightGray
             
-            let timeInMin = musica!.length / 60.00
-            let duracao = Double(round(timeInMin * 100)/100)
-            customCell.name.text = String(duracao)
+            let timeInMin = Int(musica!.length / 60.00)
+            let timInSec = Int(Int(musica!.length) % 60)
+            
+            customCell.name.text = "\(timeInMin):\(timInSec)"
             cell = customCell
             
         }
