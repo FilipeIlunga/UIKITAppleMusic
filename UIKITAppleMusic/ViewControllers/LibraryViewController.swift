@@ -20,9 +20,17 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         title = "Library"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.tintColor = UIColor.systemPink
+        navigationController?.navigationBar.barTintColor = UIColor.clear
         libraryCell.dataSource = self
         libraryCell.delegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

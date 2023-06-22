@@ -42,7 +42,7 @@ extension PlayingSongViewController: UITableViewDelegate {
         if indexPath.section == 0 {
             return 250
         } else  {
-            return 290
+            return 390
         }
     }
 }
